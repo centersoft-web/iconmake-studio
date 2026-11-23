@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#111827">
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#ffffff"> 
 <title>Icon Studio - Editor de Icones</title>
 <link rel="icon" href="icon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="icon.ico" type="image/x-icon"> 
@@ -130,6 +132,11 @@ function setupResizer(id,side){const el=$(id);let dragging=false;const move=e=>{
 setupResizer('#leftResizer','left');setupResizer('#rightResizer','right');
 updateAlpha();updateZoom();init();
 })();
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js");
+}
 </script>
 </body>
 </html>
